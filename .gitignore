@@ -4,3 +4,7 @@ cmd/webanalyze/webanalyze
 cmd/webanalyze/hosts.json
 apps.json
 dist/
+.idea/modules.xml
+.idea/vcs.xml
+.idea/webanalyze.iml
+.idea/workspace.xml
