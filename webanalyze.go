@@ -205,7 +205,7 @@ func process(job *Job, appDefs *AppsDefinition) ([]Match, []string, error) {
 	} else {
 		resp, err := fetchHost(job.URL)
 		if err != nil {
-			return nil, links, fmt.Sprintf("error retrieving: %v\n", err)
+			return nil, links, fmt.Errorf("Failed to retrieve: %v", err)
 		}
 
 		defer resp.Body.Close()
