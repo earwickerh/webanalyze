@@ -8,3 +8,4 @@ dist/
 .idea/vcs.xml
 .idea/webanalyze.iml
 .idea/workspace.xml
+.idea/webResources.xml
