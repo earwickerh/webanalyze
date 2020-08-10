@@ -164,7 +164,7 @@ func output(result webanalyze.Result, wa *webanalyze.WebAnalyzer, outWriter *csv
 
 	case "csv":
 		for _, m := range result.Matches {
-			err := outWriter.Write(
+			outWriter.Write(
 				[]string{
 					result.Host,
 					strings.Join(m.CatNames, ","),
@@ -172,7 +172,6 @@ func output(result webanalyze.Result, wa *webanalyze.WebAnalyzer, outWriter *csv
 					m.Version,
 				},
 			)
-			if err != nil { log.Printf("error writing csv: %v\n", err) }
 		}
 		outWriter.Flush()
 	case "json":
